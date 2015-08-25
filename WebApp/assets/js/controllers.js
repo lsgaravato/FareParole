@@ -5,14 +5,10 @@ myAppControllers.controller('HomeController', [
     '$scope', '$routeParams',
     function ($scope, $routeParams) {
 
-        // precaricamento di tutti gli audio
-        //preLoadAudio();
-
-        playAudio(getAudioPlayer('#audioFareParole'));
+        getAudioElementAndPlay('#audioFareParole');
 
         $scope.playAudioHint = function (selector) {
-            var audioTag = getAudioPlayer(selector);
-            audioTag.play();
+            getAudioElementAndPlay(selector);
         }
     }
 ]);
@@ -109,8 +105,7 @@ myAppControllers.controller('ScritturaVocaliController', [
             clearSelection();
             suonoAscoltato = true;
 
-            audioElem.load();
-            audioElem.play();
+            playAudio(audioElem);
 
             audioElem.onended = function() {
                 $timeout(function() {
@@ -208,11 +203,10 @@ myAppControllers.controller('LetturaVocaliController', [
         function playHint() {
             
             var audioHint = getAudioPlayer('#audioLeggi');
-            audioHint.play();
+            playAudio(audioHint);
             audioHint.onended = function () {
                 $timeout(function () {
-                    audioPlayer.load();
-                    audioPlayer.play();
+                    playAudio(audioPlayer);
                 }, 3000);
             };
         }
@@ -267,7 +261,7 @@ myAppControllers.controller('DemoSillabeController', [
 
         $scope.playSillaba = function(sillaba) {
             var audioPlayer = getAudioPlayer('#audio-' + sillaba.name);
-            audioPlayer.play();
+            playAudio(audioPlayer);
 
             $('.evidenziata').removeClass('evidenziata');
             $('#sillabazione-2-' + sillaba.name).addClass('evidenziata');
@@ -300,8 +294,7 @@ myAppControllers.controller('ScritturaSillabeController', [
             clearSelection();
             suonoAscoltato = true;
 
-            audioElem.load();
-            audioElem.play();
+            playAudio(audioElem);
             
             // suggerimento tocca la sillaba
             audioElem.onended = function() {
@@ -403,12 +396,12 @@ myAppControllers.controller('LetturaSillabeController', [
             $('#sillaba').flip($scope.showBack);
 
             var audioHint = getAudioPlayer('#audioLeggi');
-            audioHint.play();
+            playAudio(audioHint);
             $scope.isDisabled = true;
             audioHint.onended = function () {
                 setTimeout(function () {
                     //audioPlayer.load();
-                    audioPlayer.play();
+                    playAudio(audioPlayer);
                     $scope.isDisabled = false;
                 }, 3000);
             };
@@ -568,7 +561,7 @@ myAppControllers.controller('CostruzioneSillabeController', [
 
         function playAudioVittoria() {
             var audioElem = getAudioPlayer('#audioVittoria');
-            audioElem.play();
+            playAudio(audioElem);
         }
     }
 ]);
@@ -577,11 +570,10 @@ myAppControllers.controller('GiocaController', [
     '$scope', '$routeParams', '$timeout',
     function ($scope, $routeParams, $timeout) {
 
-        playAudio(getAudioPlayer('#audioGioca'));
+        getAudioElementAndPlay('#audioGioca');
 
         $scope.playAudioHint = function (selector) {
-            var audioTag = getAudioPlayer(selector);
-            audioTag.play();
+            getAudioElementAndPlay(selector);
         }
     }
 ]);
@@ -614,8 +606,7 @@ myAppControllers.controller('GiocaSillabeController', [
             clearSelection();
             setCurrentSillaba();
 
-            audioPlayer.load();
-            audioPlayer.play();
+            playAudio(audioPlayer);
 
             suonoAscoltato = true;
         }
@@ -661,12 +652,12 @@ myAppControllers.controller('GiocaSillabeController', [
                 var audioPlayerBene = getAudioPlayer('#audioBene');
                 audioPlayerBene.onended = function () {
                     setTimeout(function () {
-                        audioPlayer.play();
+                        playAudio(audioPlayer);
                         audioPlayerBene.onended = function () { };
                     }, 100);
                 };
                 
-                audioPlayerBene.play();
+                playAudio(audioPlayerBene);
             } 
         }
 
@@ -674,11 +665,12 @@ myAppControllers.controller('GiocaSillabeController', [
             var audioPlayerNo = getAudioPlayer('#audioNo');
             audioPlayerNo.onended = function () {
                 setTimeout(function () {
-                    audioPlayer.play();
+                    playAudio(audioPlayer);
                     audioPlayerNo.onended = function () { };
                 }, 100);
             };
-            audioPlayerNo.play();
+            
+            playAudio(audioPlayerNo);
             $scope.erroriTurno++;
             element.addClass("bg-rosso");
         }
@@ -767,8 +759,7 @@ myAppControllers.controller('GiocaParoleController', [
         }
 
         function ascoltaParola() {
-            audioPlayer.load();
-            audioPlayer.play();
+            playAudio(audioPlayer);
 
             suonoAscoltato = true;
         }
@@ -812,11 +803,11 @@ myAppControllers.controller('GiocaParoleController', [
                 var audioPlayerBene = getAudioPlayer('#audioBene');
                 audioPlayerBene.onended = function () {
                     setTimeout(function () {
-                        audioPlayer.play();
+                        playAudio(audioPlayer);
                         audioPlayerBene.onended = function () { };
                     }, 100);
                 };
-                audioPlayerBene.play();
+                playAudio(audioPlayerBene);
             }
 
             $scope.erroriTurno = 0;
@@ -838,11 +829,11 @@ myAppControllers.controller('GiocaParoleController', [
             var audioPlayerNo = getAudioPlayer('#audioNo');
             audioPlayerNo.onended = function () {
                 setTimeout(function () {
-                    audioPlayer.play();
+                    playAudio(audioPlayer);
                     audioPlayerNo.onended = function () { };
                 }, 100);
             };
-            audioPlayerNo.play();
+            playAudio(audioPlayerNo);
         }
 
         function clearSelection() {
@@ -911,8 +902,7 @@ myAppControllers.controller('GiocaParoleController', [
         }
 
         function playAudioVittoria() {
-            var audioElem = getAudioPlayer('#audioVittoria');
-            audioElem.play();
+            getAudioElementAndPlay('#audioVittoria');
         }
     }
 ]);

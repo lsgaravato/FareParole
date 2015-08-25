@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.riccardocavalieri.fareparole"
+    versionCode = "23"
+    version     = "0.2.3" >
+
+  <!-- versionCode is optional and Android only -->
+
+  <name>Fare Parole</name>
+
+  <description>
+    A breve una descrizione dell'app.
+  </description>
+
+  <author href="www.riccardocavalieri.com" email="riccardocavalieri@gmail.com">
+    Riccardo Cavalieri
+  </author>
+
+  <!-- Core plugins -->
+  <gap:plugin name="org.apache.cordova.media" />
+
+</widget>

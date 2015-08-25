@@ -48,10 +48,10 @@ function setSoundToPlay(audioElem, audioUrl) {
     audioElem.src = audioUrl;
 }
 
-function playAudio(audioElem) {
-    audioElem.load();
-    audioElem.play();
-}
+//function playAudio(audioElem) {
+//    audioElem.load();
+//    audioElem.play();
+//}
 
 
 function getAudioPlayer(selector) {
@@ -61,49 +61,79 @@ function getAudioPlayer(selector) {
 }
 
 function playAudioBene() {
-    getAudioPlayer('#audioBene').play();
+    getAudioElementAndPlay('#audioBene');
 }
 
 function playAudioNo() {
-    getAudioPlayer('#audioNo').play();
+    getAudioElementAndPlay('#audioNo');
 }
 
 function playAudioLeggi() {
-    getAudioPlayer('#audioLeggi').play();
+    getAudioElementAndPlay('#audioLeggi');
 }
 
 function playAudioTocca() {
-    getAudioPlayer('#audioTocca').play();
+    getAudioElementAndPlay('#audioTocca');
 }
 
 function playAudioToccaIlBottone() {
-    getAudioPlayer('#audioToccaIlBottone').play();
+    getAudioElementAndPlay('#audioToccaIlBottone');
 }
 
 function playAudioToccaUnaLettera() {
-    getAudioPlayer('#audioToccaUnaLettera').play();
+    getAudioElementAndPlay('#audioToccaUnaLettera');
 }
 
 function playAudioToccaLaLettera() {
-    getAudioPlayer('#audioToccaLaLettera').play();
+    getAudioElementAndPlay('#audioToccaLaLettera');
 }
 
 function playAudioToccaLeLettere() {
-    getAudioPlayer('#audioToccaLeLettere').play(); 
+    getAudioElementAndPlay('#audioToccaLeLettere');
 }
 
 function playAudioToccaLaSillaba() {
-    getAudioPlayer('#audioToccaLaSillaba').play();
+    getAudioElementAndPlay('#audioToccaLaSillaba');
 }
 
 function playAudioToccaLeSillabe() {
-    getAudioPlayer('#audioToccaLeSillabe').play();
+    getAudioElementAndPlay('#audioToccaLeSillabe');
+}
+
+function getAudioElementAndPlay(audioElementId) {
+    var audioElement = getAudioPlayer(audioElementId);
+    return playAudio(audioElement);
+}
+
+function playAudio(audioElement) {
+
+    if (audioElement == undefined)
+        return;
+    
+    if (isWebApp) {
+        audioElement.load();
+        audioElement.play();
+    } else {
+        playAudioPhoneGap(audioElement);
+    }
+}
+
+function playAudioPhoneGap(audioElement) {
+
+    var url = audioElement.getAttribute('src');
+    var myMedia = new Media(url,
+            // success callback
+             function () { console.log("playAudio():Audio Success"); },
+            // error callback
+             function (err) { console.log("playAudio():Audio Error: " + err); }
+    );
+    // Play audio
+    myMedia.play();
 }
 
 
-function preLoadAudio() {
-    //var audioTags = $('audio');
-    //audioTags.each(function (index) { $(this).load(); });
+function isWebApp() {
+    return document.URL.match(/^(https?|localhost|chrome-extension):/);
 }
 
 
