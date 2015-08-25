@@ -1,0 +1,28 @@
+﻿<span ng-controller="DemoConsonanteController">
+    <div class="wa-header">
+        <div class="bottone-sx"><a href="#/impara"><img src="assets/images/bottone-sx.png" /></a></div>
+        <div class="casa"><a href="#/"><img src="assets/images/casa.png" /></a></div>
+        <div class="titolo"><img src="assets/images/titolo.png" /></div>
+        <div class="vaiaimparare"><a href="#/impara"><img src="assets/images/vaiaimparare.png" /></a></div>
+        <div class="vaiagiocare"><a href="#/gioca"><img src="assets/images/vaiagiocare.png" /></a></div>
+        <div class="bottone-dx"><a href="#/demoSillabe/{{name}}"><img src="assets/images/bottone-dx.png" /></a></div>
+    </div>
+    <div class="wa-main">
+        <div class="wa-main-wrapper">
+            <div class="wa-c1">
+                <div class="box-consonante">
+                    <div class="carta grande ombra"><img ng-src="{{consonante.imageUrl}}" /></div>
+                </div>
+                <div class="box-pulsante">
+                    <div class="pulsante audio" ng-click="playAudioConsonante();">
+                        <img class="imgToccaBottone" />
+                    </div>
+                </div>
+                <audio id="audio" preload="auto">
+                    <source ng-src="{{consonante.audioConParola}}" type="audio/mpeg" />
+                    Your browser does not support this audio format.
+                </audio>
+            </div>
+        </div>
+    </div>
+</span>

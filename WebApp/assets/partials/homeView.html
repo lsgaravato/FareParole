@@ -1,0 +1,43 @@
+﻿<audio id="titolo">
+    <source src="assets/sounds/messaggi/fare-parole.mp3" type="audio/mpeg" />
+    Your browser does not support this audio format.
+</audio>
+
+<div class="wa-header">
+  <div class="casa"><a href="#/"><img src="assets/images/casa.png" /></a></div>
+  <div class="titolo"><img src="assets/images/titolo.png" /></div>
+  <div class="vaiaimparare"><a href="#/impara"><img src="assets/images/vaiaimparare.png" /></a></div>
+  <div class="vaiagiocare"><a href="#/gioca"><img src="assets/images/vaiagiocare.png" /></a></div>
+</div>
+<div class="wa-main">
+  <div class="wa-main-wrapper">
+    <div class="wa-home" ng-controller="HomeController">
+      <div class="box-home">
+        <div id="gioco-sillabe" class="link-a-impara"><a href="#/impara"><img src="assets/images/link-impara.png" /></a>
+            <div id="hintImpara" class="pulsante-mini-audio" ng-click="playAudioHint('#audioHintImpara');"></div>
+        </div>
+        <div id="gioco-parole" class="link-a-gioca"><a href="#/gioca"><img src="assets/images/link-gioca.png" /></a>
+            <div id="#hintGioca" class="pulsante-mini-audio" ng-click="playAudioHint('#audioHintGioca');"></div>
+        </div>
+      </div>
+    </div>
+    <div class="wa-footer"><img src="assets/images/loghi.png" width="980" /></div>
+    <div class="wa-credits"><a href="#/leggi">Scopri di più sull’App</a> | <a href="#/crediti">Crediti</a> | La WebApp è compatibile con: Chrome <a href="https://www.google.it/chrome/browser/desktop/" target="_blank"><img src="assets/images/browser-chrome.png" width="24" height="25" title="Chrome"/></a> e Safari <a href="https://www.apple.com/it/safari/" target="_blank"><img src="assets/images/browser-safari.png" width="24" height="25" title="Safari"/></a></div>
+  </div>
+</div>
+
+<audio id="audioHintImpara">
+    <source src="assets/sounds/messaggi/impara.mp3" type="audio/mpeg" />
+    Your browser does not support this audio format.
+</audio>
+
+<audio id="audioHintGioca">
+    <source src="assets/sounds/messaggi/gioca.mp3" type="audio/mpeg" />
+    Your browser does not support this audio format.
+</audio>
+
+<audio id="audioFareParole">
+    <source src="assets/sounds/messaggi/fare-parole.mp3" type="audio/mpeg" />
+    Your browser does not support this audio format.
+</audio>
+

@@ -1,0 +1,32 @@
+﻿<span ng-controller="DemoSillabeController">
+    <div class="wa-header">
+        <div class="bottone-sx"><a href="#/demoConsonante/{{name}}"><img src="assets/images/bottone-sx.png" /></a></div>
+        <div class="casa"><a href="#/"><img src="assets/images/casa.png" /></a></div>
+        <div class="titolo"><img src="assets/images/titolo.png" /></div>
+        <div class="vaiaimparare"><a href="#/impara"><img src="assets/images/vaiaimparare.png" /></a></div>
+        <div class="vaiagiocare"><a href="#/gioca"><img src="assets/images/vaiagiocare.png" /></a></div>
+        <div class="bottone-dx"><a href="#/{{nextStep}}/{{name}}"><img src="assets/images/bottone-dx.png" /></a></div>
+    </div>
+    <div class="wa-main">
+        <div class="wa-main-wrapper">
+            <div class="wa-c2">
+                <div class="box-lettere">
+                    <div id="sillabazione-2-{{sillaba.name}}" class="box-sillabazione" ng-repeat="sillaba in sillabe">
+                        <!-- class="evidenziata" -->
+                        <div class="pulsante-mini-audio" ng-click="playSillaba(sillaba);">
+                            <img class="imgToccaBottone" />
+                        </div>
+                        <audio id="audio-{{sillaba.name}}">
+                            <source ng-src="{{sillaba.audioScandito}}" type="audio/mpeg" />
+                            Your browser does not support this audio format.
+                        </audio>
+                        <div id="lettera-{{sillaba.s1}}" class="lettera-1">{{sillaba.s1.toUpperCase()}}</div>
+                        <div id="lettera-{{sillaba.s2}}" class="lettera-2">{{sillaba.s2.toUpperCase()}}</div>
+                        <div id="sillaba-{{sillaba.name}}" class="sillaba">{{sillaba.name.toUpperCase()}}</div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</span>

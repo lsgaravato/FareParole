@@ -1,0 +1,780 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+html {
+    overflow-y: visible; /* serve per abilitare lo scrolling su Google Chrome Packaged Apps */
+}
+
+body {
+	font-family: Arial, serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #707173;
+	margin: 0;
+	padding: 0;
+	/*background-color: #43a86c;*/
+	background-color: #a3d8e5;
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+.wa-header {
+	background-color: #a2add0;
+	text-align: center;
+	padding: 0px 20px 0px 20px;
+	height: 65px;
+}
+.wa-main {
+	background-color: #a3d8e5;
+}
+.wa-main-wrapper {
+	width: 980px;
+	min-height: 680px;
+	min-height: 535px;
+	height: 100%;
+	margin: 0 auto;
+	padding: 30px 0 0 0;/*background-color: #a3d8e5;*/
+}
+.bottone-sx {
+	float: left;
+}
+.bottone-sx:hover {
+	opacity: 0.5;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha"(Opacity=50);
+}
+.bottone-dx {
+	float: right;
+}
+.bottone-dx:hover {
+	opacity: 0.7;
+}
+.titolo {
+	display: inline;
+	padding: 0 20px;
+}
+.casa {
+	display: inline;
+}
+.casa:hover {
+	opacity: 0.7;
+}
+.vaiaimparare {
+	display: inline;
+}
+.vaiaimparare:hover {
+	opacity: 0.7;
+}
+.vaiagiocare {
+	display: inline;
+}
+.vaiagiocare:hover {
+	opacity: 0.7;
+}
+.link-a-impara {
+	display: inline-table;
+	margin: 0 70px;
+}
+.link-a-impara:hover {
+}
+.link-a-gioca {
+	display: inline-table;
+	margin: 0 70px;
+}
+.link-a-gioca:hover {
+}
+/* WA-HOME :: HOME */
+.wa-home .box-home {
+	text-align: center;
+	margin: 10px 0 30px 0;
+}
+.wa-menuprovvisorio {
+	padding: 10px;
+	background-color: #fff;
+	margin: 0 0 20px 0;
+}
+.wa-link {
+	font-size: 11px;
+	line-height: 1em;
+	padding: 0 0 5px 0;
+	text-align: center;
+}
+.wa-link a:hover {
+	color: #ff0000;
+}
+.wa-home .pulsante-mini-audio {
+	margin: 0 auto;
+	text-align: center;
+	cursor: pointer;
+	width: 62px;
+	height: 62px;
+	display: block;
+	border: 3px solid #f5f5f5;
+	border-radius: 50%;
+	background-color: #1399bc;
+	background-image: url(../images/ico-audio-mini.png);
+	background-repeat: no-repeat;
+	background-position: center 8px;
+}
+.wa-home .pulsante-mini-audio:hover {
+	background-color: #6874cf;
+}
+/* WA-IMPARA :: SCHERMATA IMPARA */
+.wa-impara {
+}
+.bg-impara {
+/*background-color: #13a9e7*/
+}
+.wa-impara .box-impara {
+	text-align: center;
+}
+.wa-impara .impara-vocali {
+	padding: 8px 0;
+	/*background-color: #c2edf7;*/
+	border: 1px #fff dotted;
+}
+.wa-impara .impara-box-consonanti {
+	padding: 8px 0 0 0;
+	/*background-color: #c2f7d3;*/
+	border: 1px #fff dotted;
+}
+.wa-impara .impara-consonanti {
+	margin-bottom: 8px;
+}
+.wa-impara .impara-vocali:hover .carta img {
+	background-color: #FFCFD0;
+	cursor: pointer;
+}
+.wa-impara .box-impara .carta {
+	margin: 0 20px;
+}
+/* WA-GIOCA :: SCHERMATA GIOCA */
+.bg-gioca {
+	background-color: #e79a13
+}
+.wa-gioca .box-gioca {
+	text-align: center;
+	margin-top: 70px;
+}
+.link-ai-giochi {
+	display: inline-table;
+	margin: 0 70px;
+}
+.link-ai-giochi:hover {
+}
+.wa-gioca .pulsante-mini-audio {
+	margin: 0 auto;
+	text-align: center;
+	cursor: pointer;
+	width: 62px;
+	height: 62px;
+	display: block;
+	border: 3px solid #f5f5f5;
+	border-radius: 50%;
+	background-color: #1399bc;
+	background-image: url(../images/ico-audio-mini.png);
+	background-repeat: no-repeat;
+	background-position: center 8px;
+}
+.wa-gioca .pulsante-mini-audio:hover {
+	background-color: #6874cf;
+}
+/* WA-GIOCOSILLABE :: SCHERMATA GIOCA CON LE SILLABE */
+.wa-giocosillabe {
+	padding: 0 30px;
+}
+.wa-giocosillabe .box-sillabario {
+	float: right;
+}
+.wa-giocosillabe .sillabario table {
+	display: table;
+	border-collapse: inherit;
+	border-spacing: 0px;
+	border-color: fff;
+	background-color: #fff;
+}
+.wa-giocosillabe .sillabario td, th {
+	width: 75px;
+	padding: 2px 4px;
+}
+.wa-giocosillabe .sillabario table, .wa-giocosillabe .sillabario table th, .wa-giocosillabe .sillabario table td {
+	border: 1px solid #777;
+}
+.wa-giocosillabe .sillabario table {
+	border-spacing: 0 !important;
+	border-collapse: collapse !important;
+}
+.wa-giocosillabe .intestazione-o {
+	color: #000;
+	font-size: 22px;
+	font-weight: bold;
+	background-color: #a2add0;
+}
+.wa-giocosillabe .intestazione-v {
+	color: #000;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: #a2add0;
+}
+.wa-giocosillabe .cliccabile {
+	background-color: #fff;
+}
+.wa-giocosillabe .cliccabile:hover {
+	background-color: #ffdbaf;
+	cursor: pointer;
+}
+.wa-giocosillabe .box-controllidigioco {
+	margin: 70px 0 0 0;
+	float: left;
+}
+.wa-giocosillabe .box-scrittura {
+	font-size: 70px;
+	line-height: 70px;
+	text-align: center;
+	margin: 0 auto 50px auto;
+	width: 250px;
+	background-color: #fff;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+.wa-giocosillabe .sillaba {
+	display: inline-table;
+	padding: 20px 0;
+	margin: 0;
+}
+.wa-giocosillabe .box-pulsante {
+	text-align: center;
+}
+/* WA-GIOCOPAROLE :: SCHERMATA GIOCA CON LE PAROLE */
+.wa-giocoparole {
+	padding: 0 30px;
+}
+.wa-giocoparole .box-sillabario {
+	float: right;
+}
+.wa-giocoparole .sillabario table {
+	display: table;
+	border-collapse: inherit;
+	border-spacing: 0px;
+	border-color: fff;
+	background-color: #fff;
+}
+.wa-giocoparole .sillabario td, th {
+	width: 75px;
+	padding: 2px 4px;
+}
+.wa-giocoparole .sillabario table, .wa-giocoparole .sillabario table th, .wa-giocoparole .sillabario table td {
+	border: 1px solid #777;
+}
+.wa-giocoparole .sillabario table {
+	border-spacing: 0 !important;
+	border-collapse: collapse !important;
+}
+.wa-giocoparole .intestazione-o {
+	color: #000;
+	font-size: 22px;
+	font-weight: bold;
+	background-color: #a2add0;
+}
+.wa-giocoparole .intestazione-v {
+	color: #000;
+	font-size: 22px;
+	font-weight: bold;
+	background-color: #a2add0;
+}
+.wa-giocoparole .cliccabile {
+	background-color: #fff;
+}
+.wa-giocoparole .cliccabile:hover {
+	background-color: #ffdbaf;
+	cursor: pointer;
+}
+.wa-giocoparole .box-controllidigioco {
+	margin: 0;
+	float: left;
+}
+.wa-giocoparole .box-disegno {
+	text-align: center;
+	width: 300px;
+}
+.wa-giocoparole .box-disegno .disegno img {
+	width: 180px;
+	padding-top: 20px;
+}
+.wa-giocoparole .box-scrittura {
+	font-size: 36px;
+	line-height: 36px;
+	letter-spacing: 2px;
+	text-align: center;
+	margin: 0 auto 50px auto;
+	width: 300px;
+}
+.wa-giocoparole .sillaba {
+	display: inline-table;
+	padding: 20px 0;
+	margin: 0;
+}
+.wa-giocoparole .cartadagioco {
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	background-color: #fff;
+}
+/* WA-V1 :: SCHERMATA VOCALI */
+.wa-v1 .box-vocali {
+	text-align: center;
+	margin-bottom: 45px;
+}
+.wa-v1 .box-vocali .carta {
+	margin: 0 30px;
+}
+.wa-v1 .box-vocale {
+	text-align: center;
+	margin: 0 auto;
+}
+/* WA-V2 :: SCHERMATA VOCALI */
+.wa-v2 .box-vocali {
+	text-align: center;
+	margin-bottom: 140px;
+}
+.wa-v2 .box-vocali .carta {
+	margin: 0 30px;
+}
+.wa-v2 .box-pulsante {
+	text-align: center;
+	margin: 0 auto;
+}
+/* WA-V3 :: SCHERMATA VOCALI */
+.wa-v3 .box-vocale {
+	text-align: center;
+	margin-bottom: 60px;
+}
+.wa-v3 .box-pulsante {
+	text-align: center;
+	margin: 0 auto;
+}
+/* WA-C1 :: SCHERMATA CONSONANTI 1 */
+.wa-c1 .box-consonante {
+	text-align: center;
+	margin-bottom: 60px;
+}
+.wa-c1 .box-pulsante {
+	text-align: center;
+	margin: 0 auto;
+}
+/* WA-C2 :: SCHERMATA CONSONANTI 2 */
+.wa-c2 .box-sillabazione {
+	font-size: 68px;
+	line-height: 68px;
+	margin: 0;
+	padding: 10px 0 10px 20px;
+	border-bottom: 2px #fff solid;
+}
+.wa-c2 .pulsante-mini-audio {
+	text-align: left;
+	float: left;
+	cursor: pointer;
+	width: 62px;
+	height: 62px;
+	display: block;
+	border: 3px solid #f5f5f5;
+	border-radius: 50%;
+	background-color: #1399bc;
+	background-image: url(../images/ico-audio-mini.png);
+	background-repeat: no-repeat;
+	background-position: center 8px;
+}
+.wa-c2 .pulsante-mini-audio:hover {
+	background-color: #6874cf;
+}
+.wa-c2 .lettera-1 {
+	text-align: left;
+	float: left;
+	width: 110px;
+	margin-left: 100px;
+}
+.wa-c2 .lettera-2 {
+	text-align: left;
+	float: left;
+	width: 110px;
+	margin-left: 100px;
+}
+.wa-c2 .sillaba {
+	text-align: left;
+	float: left;
+	width: 160px;
+	margin-left: 150px;
+}
+/* WA-C3 :: SCHERMATA CONSONANTI 4 */
+ 
+.wa-c3 .box-consonanti {
+	font-size: 60px;
+	line-height: 60px;
+	text-align: center;
+	margin: 0 auto 60px auto;
+}
+.wa-c3 .box-consonanti .lettera {
+	margin-right: 70px;
+}
+.wa-c3 .box-scrittura {
+	font-size: 70px;
+	line-height: 70px;
+	text-align: center;
+	margin: 0 auto 50px auto;
+	width: 250px;
+	background-color: #fff;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+.wa-c3 .lettera-1 {
+	display: inline-table;
+	padding: 20px 0;
+	margin: 0;
+}
+.wa-c3 .lettera-2 {
+	display: inline-table;
+	padding: 20px 0;
+	margin: 0;
+}
+.wa-c3 .box-pulsante {
+	text-align: center;
+}
+/* WA-C4 :: SCHERMATA CONSONANTI 4 */
+.wa-c4 .box-consonanti {
+	font-size: 60px;
+	line-height: 60px;
+	text-align: center;
+	margin: 0 auto 140px auto;
+}
+.wa-c4 .box-consonanti .carta {
+	margin: 0 24px;
+}
+.wa-c4 .box-pulsante {
+	text-align: center;
+	margin: 0 auto;
+}
+/* WA-C5 :: SCHERMATA CONSONANTI 5 */
+.wa-c5 .box-consonante {
+	text-align: center;
+	margin-bottom: 60px;
+}
+.wa-c5 .box-pulsante {
+	text-align: center;
+	margin: 0 auto;
+}
+/* WA-CARTA :: SCHERMATA CARTA */
+.carta {
+	display: inline-table;
+	text-align: center;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border: 4px solid #c3b3b3;
+	border: 4px solid #fff;
+	/*background-color: #fff*/;
+}
+.carta .testo {
+	vertical-align: top;
+	background-color: #fff;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.carta img {
+	width: 100%;
+	vertical-align: top;
+	background-color: #fff;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.carta.grande {
+	width: 232px;
+	height: 316px;
+	font-size: 96px;
+	text-align: center;
+	padding: 0 0 0 0;
+	margin: 0;
+	vertical-align: top;
+}
+.carta.grande .testo {
+	line-height: 308px;
+}
+.carta.media {
+	width: 116px;
+	height: 158px;
+	font-size: 46px;
+	text-align: center;
+	padding: 0 0 0 0;
+	margin: 0;
+	vertical-align: top;
+}
+.carta.media .testo {
+	line-height: 158px;
+}
+.carta.piccola {
+	width: 100px;
+	height: 135px;
+	font-size: 35px;
+	text-align: center;
+	padding: 0 0 0 0;
+	margin: 0;
+	vertical-align: top;
+}
+.carta.piccola .testo {
+	line-height: 135px;
+}
+.carta.moltopiccola {
+	width: 82px;
+	height: 111px;
+	font-size: 30px;
+	text-align: center;
+	padding: 0 0 0 0;
+	margin: 0;
+	vertical-align: top;
+}
+.carta.moltopiccola .testo {
+	line-height: 111px;
+}
+.carta.premi img:hover {
+	background-color: #FFCFD0 !important;
+	cursor: pointer;
+}
+/* GENERALI */
+.opacity-100 {
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha"(Opacity=100);
+}
+.opacity-80 {
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha"(Opacity=80);
+}
+.cursor-hand {
+	cursor: pointer;
+}
+.ombraclassica {
+	-webkit-box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.3);
+	box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.3);
+}
+.ombra {
+	-webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
+	filter: url(#drop-shadow);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+	filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
+.ombra.grande {
+	-webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
+	filter: url(#drop-shadow);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+	filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
+.ombra.media {
+	-webkit-filter: drop-shadow(6px 6px 8px rgba(0,0,0,0.5));
+	filter: url(#drop-shadow);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=6, OffY=6, Color='#444')";
+	filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=6, OffY=6, Color='#444')";
+}
+.ombra.piccola {
+	-webkit-filter: drop-shadow(6px 6px 8px rgba(0,0,0,0.5));
+	filter: url(#drop-shadow);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=6, OffY=6, Color='#444')";
+	filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=6, OffY=6, Color='#444')";
+}
+.giusto {
+	background-color: #30c783 !important;
+}
+.errore {
+	background-color: #c7241b !important;
+}
+.pulsante {
+	cursor: pointer;
+	width: 120px;
+	height: 120px;
+	margin: 0 auto;
+	display: block;
+	line-height: 50px;
+	border: 4px solid #f5f5f5;
+	border-radius: 50%;
+	color: #f5f5f5;
+	text-align: center;
+	text-decoration: none;
+	background-color: #1399bc;
+	font-size: 20px;
+	font-weight: bold;
+	background-repeat: no-repeat;
+	background-position: center 10px;
+}
+.pulsante:hover {
+	background-color: #6874cf;
+}
+.pulsante.audio {
+	background-image: url(../images/ico-audio.png);
+}
+.pulsante.leggi {
+	background-image: url(../images/ico-leggi.png);
+}
+.clear {
+	clear: both;
+}
+.evidenziata {
+	background-color: #fff;
+}
+.bg-verde {
+	background-color: #30c783 !important;
+	color: #fff;
+}
+.bg-rosso {
+	background-color: #c7241b !important;
+	color: #fff;
+}
+.c-verde {
+	color: #30c783 !important;
+}
+.c-rosso {
+	color: #c7241b !important;
+}
+/* GENERALI */
+.vaiaimparare {
+	display: none;
+}
+.vaiagiocare {
+	display: none;
+}
+.wa-menuprovvisorio {
+	display: none;
+}
+/* ANIMAZIONI */
+.evidenziata .lettera-1, .evidenziata .lettera-2, .evidenziata .sillaba {
+	color: #43a86c;
+	-webkit-transition: color .3s ease-in;
+	-moz-transition: color .3s ease-in;
+	-o-transition: color .3s ease-in;
+	-ms-transition: color .3s ease-in;
+	transition: color .3s ease-in;
+}
+.evidenziata .lettera-1 {
+	-webkit-transition-delay: 0.1s;
+	-moz-transition-delay: 0.1s;
+	-o-transition-delay: 0.1s;
+	-ms-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+.evidenziata .lettera-2 {
+	-webkit-transition-delay: 1.4s;
+	-moz-transition-delay: 1.4s;
+	-o-transition-delay: 1.4s;
+	-ms-transition-delay: 1.4s;
+	transition-delay: 1.4s;
+}
+.evidenziata .sillaba {
+	-webkit-transition-delay: 2.9s;
+	-moz-transition-delay: 2.9s;
+	-o-transition-delay: 2.9s;
+	-ms-transition-delay: 2.9s;
+	transition-delay: 2.9s;
+}
+/* FOOTER */
+.wa-footer {
+	margin-top: 10px;
+	padding-top: 5px;
+	border-top: 5px solid #fff;
+	text-align: center;
+	color: #fff;
+	font-size: 24px;
+}
+.wa-credits {
+	text-align: right;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	color: #000000;
+	font-size: 15px;
+	font-weight: 24px;
+	line-height: 1em;
+	margin: 0px 20px 0 0;
+}
+.wa-credits a {
+	color: #000000;
+	text-decoration: none;
+	padding-bottom: 5px;
+}
+.wa-credits a:hover {
+	color: #555;
+	text-decoration: none;
+}
+.wa-credits img {
+	vertical-align: text-bottom;
+}
+.testo {
+	font-weight: normal;
+	line-height: 1.4em;
+}
+.testo a {
+	color: #333;
+}
+.bg-leggi {
+	background-color: rgba(255,255,255,1.00)
+}
+.bg-crediti {
+	background-color: rgba(255,255,255,1.00)
+}
+
+
+
+
+.pulsante {
+    position: relative;
+}
+
+.pulsante-mini-audio {
+    position: relative;
+}
+
+.imgToccaBottone {
+    position:absolute;
+    content: url("../images/finger.png");
+    display: none;
+}
+
+.imgToccaCarte {
+    position:absolute;
+    content: url("../images/finger.png");
+    display: none;
+    width: 120px;
+    height: 120px;
+    left: -100px;
+}
+
+.pulsante .imgToccaBottone {
+    left: -150px;
+    width: 120px;
+    height: 120px;
+}
+
+.pulsante-mini-audio .imgToccaBottone {
+    left: -100px;
+    width: 62px;
+    height: 62px;
+}
+
+.box-impara .imgToccaCarte {
+    top: 40%;
+}
+
+.box-sillabario .imgToccaCarte {
+    top: 70%;
+    left: -150px;
+}
+
+
+#imgSpeaker {
+    content: url("../images/ico-speaker-loud.png");
+    position: fixed; 
+    bottom: 10px; 
+    right: 10px; 
+    width: 48px;
+    cursor: pointer;
+}
+
+#imgSpeaker.audioMuted {
+    content: url("../images/ico-speaker-mute.png");
+}

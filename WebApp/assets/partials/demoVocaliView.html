@@ -1,0 +1,38 @@
+﻿<div class="wa-header">
+    <div class="bottone-sx"><a href="#/impara"><img src="assets/images/bottone-sx.png" /></a></div>
+    <div class="casa"><a href="#/"><img src="assets/images/casa.png" /></a></div>
+    <div class="titolo"><img src="assets/images/titolo.png" /></div>
+    <div class="vaiaimparare"><a href="#/impara"><img src="assets/images/vaiaimparare.png" /></a></div>
+    <div class="vaiagiocare"><a href="#/gioca"><img src="assets/images/vaiagiocare.png" /></a></div>
+    <div class="bottone-dx"><a href="#/scritturaVocali"><img src="assets/images/bottone-dx.png" /></a></div>
+</div>
+<div class="wa-main">
+    <div class="wa-main-wrapper">
+        <div class="wa-v1" ng-controller="DemoVocaliController">
+            <div class="box-vocali" style="position: relative">
+                <img class="imgToccaCarte" />
+                <div ng-repeat="vocale in vocali" id="v1-vocale-{{vocale.name}}" class="carta media ombra premi"><img ng-src="{{vocale.imageUrl}}" ng-click="setVocale(vocale)" /></div>
+            </div>
+            <div class="box-vocale">
+                <!--<div id="v1-vocale" class="carta grande ombra">
+                        <img ng-src="{{mainImageUrl}}" />
+                    </div>-->
+                
+                <div id="v1-vocale" class="carta grande ombra">
+                    <div class="front">
+                        <img id="imgFront" ng-src="{{imgFront}}" />
+                    </div>
+                    <div class="back">
+                        <img id="imgBack" ng-src="{{imgBack}}" />
+                    </div>
+                </div>
+
+            </div>
+
+            <audio id="audio" preload="auto">
+                <source src="" type="audio/mpeg" />
+                Your browser does not support this audio format.
+            </audio>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+﻿<audio id="titoloLetturaVocali">
+    <source src="assets/sounds/messaggi/tocca-il-bottone.mp3" type="audio/mpeg" />
+    Your browser does not support this audio format.
+</audio>
+
+<div class="wa-header">
+    <div class="bottone-sx"><a href="#/scritturaVocali"><img src="assets/images/bottone-sx.png" /></a></div>
+    <div class="casa"><a href="#/"><img src="assets/images/casa.png" /></a></div>
+    <div class="titolo"><img src="assets/images/titolo.png" /></div>
+    <div class="vaiaimparare"><a href="#/impara"><img src="assets/images/vaiaimparare.png" /></a></div>
+    <div class="vaiagiocare"><a href="#/gioca"><img src="assets/images/vaiagiocare.png" /></a></div>
+    <div class="bottone-dx"><a href="#/impara"><img src="assets/images/bottone-dx.png" /></a></div>
+</div>
+<div class="wa-main">
+    <div class="wa-main-wrapper">
+        <div class="wa-v3" ng-controller="LetturaVocaliController">
+            <div class="box-vocale">
+
+                <div id="v3-vocale" class="carta grande ombra">
+                    <div class="front">
+                        <img id="imgFront" ng-src="{{imgFront}}" />
+                    </div>
+                    <div class="back">
+                        <img id="imgBack" ng-src="{{imgBack}}" />
+                    </div>
+                </div>
+            </div>
+            <div class="box-pulsante">
+                <div id="v3-pulsante" class="pulsante leggi" ng-click="playSoundLettura()">
+                    <img class="imgToccaBottone" />
+                </div>
+            </div>
+
+            <audio id="audio">
+                <source src="{{currentVocale.audioVocale}}" type="audio/mpeg" />
+                Your browser does not support this audio format.
+            </audio>
+
+        </div>
+    </div>
+</div>

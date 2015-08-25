@@ -1,0 +1,35 @@
+﻿<div class="wa-header" ngcontroller="ScritturaSillabeController">
+    <div class="bottone-sx"><a href="#/{{previousStep}}/{{name}}"><img src="assets/images/bottone-sx.png" /></a></div>
+    <div class="casa"><a href="#/"><img src="assets/images/casa.png" /></a></div>
+    <div class="titolo"><img src="assets/images/titolo.png" /></div>
+    <div class="vaiaimparare"><a href="#/impara"><img src="assets/images/vaiaimparare.png" /></a></div>
+    <div class="vaiagiocare"><a href="#/gioca"><img src="assets/images/vaiagiocare.png" /></a></div>
+    <div class="bottone-dx"><a href="#/letturaSillabe/{{name}}"><img src="assets/images/bottone-dx.png" /></a></div>
+</div>
+<div class="wa-main">
+    <div class="wa-main-wrapper">
+        <div class="wa-c4">
+            <div class="box-consonanti" style="position: relative">
+                <img class="imgToccaCarte" />
+                <div id="sillaba-{{sillaba.name}}" class="carta media ombra premi" ng-repeat="sillaba in sillabe" ng-click="checkSelection(sillaba.name);">
+                    <div class="front testo">
+                        <span>{{sillaba.name.toUpperCase()}}</span>
+                    </div>
+                    <div class="back testo">
+                        <!--<img src="/assets/images/lettera.png" />-->
+                        <span>  </span>
+                    </div>
+                </div>
+            </div>
+            <div class="box-pulsante">
+                <div class="pulsante audio" ng-click="playSoundScrittura()">
+                    <img class="imgToccaBottone" />
+                </div>
+            </div>
+            <audio id="audio">
+                <source ng-src="{{currentSillaba.audioSillaba}}" type="audio/mpeg" />
+                Your browser does not support this audio format.
+            </audio>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+﻿<span ng-controller="LetturaSillabeController">
+    <div class="wa-header">
+        <div class="bottone-sx"><a href="#/scritturaSillabe/{{name}}"><img src="assets/images/bottone-sx.png" /></a></div>
+        <div class="casa"><a href="#/"><img src="assets/images/casa.png" /></a></div>
+        <div class="titolo"><img src="assets/images/titolo.png" /></div>
+        <div class="vaiaimparare"><a href="#/impara"><img src="assets/images/vaiaimparare.png" /></a></div>
+        <div class="vaiagiocare"><a href="#/gioca"><img src="assets/images/vaiagiocare.png" /></a></div>
+        <div class="bottone-dx"><a href="#/impara"><img src="assets/images/bottone-dx.png" /></a></div>
+    </div>
+    <div class="wa-main">
+        <div class="wa-main-wrapper">
+            <div class="wa-c5">
+                <div class="box-consonante">
+                    <!--<div id="sillaba" class="carta grande ombra" style="background-color: #fff;">
+                            <span class="testo">{{currentSillaba.name.toUpperCase()}}</span>
+                        </div>-->
+                    <div id="sillaba" class="carta grande ombra">
+                        
+                        <div id="front" class="front testo">
+                            <span class="imgFront"></span>
+                        </div>
+                        <div id="back" class="back testo">
+                            <span class="imgBack"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-pulsante">
+                    <div class="pulsante leggi" ng-click="playSoundLettura()">
+                        <img class="imgToccaBottone" />
+                    </div>
+                </div>
+                <audio id="audio">
+                    <source ng-src="{{currentSillaba.audioSillaba}}" type="audio/mpeg" />
+                    Your browser does not support this audio format.
+                </audio>
+            </div>
+        </div>
+    </div>
+</span>

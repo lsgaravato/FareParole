@@ -1,0 +1,37 @@
+﻿<div class="wa-header">
+    <!--<div class="bottone-sx"><a href="#/"><img src="assets/images/bottone-sx.png" /></a></div>-->
+    <div class="casa"><a href="#/"><img src="assets/images/casa.png" /></a></div>
+    <div class="titolo"><img src="assets/images/titolo.png" /></div>
+    <div class="vaiaimparare"><a href="#/impara"><img src="assets/images/vaiaimparare.png" /></a></div>
+    <div class="vaiagiocare"><a href="#/gioca"><img src="assets/images/vaiagiocare.png" /></a></div>
+    <!--<div class="bottone-dx"><a href="#/"><img src="assets/images/bottone-dx.png" /></a></div>-->
+</div>
+<div class="wa-main bg-gioca" ng-controller="GiocaController">
+    <div class="wa-main-wrapper">
+        <div class="wa-gioca">
+            <div class="box-gioca">
+                <div id="gioco-sillabe" class="link-ai-giochi">
+                    <a href="#/gioca/sillabe"><img src="assets/images/link-gioca-con-le-sillabe.png"></a>
+                    <div id="#HintGiocaconlesillabe" class="pulsante-mini-audio" ng-click="playAudioHint('#audioHintGiocaconlesillabe');"></div>
+                </div>
+                <div id="gioco-parole" class="link-ai-giochi">
+                    <a href="#/gioca/parole"><img src="assets/images/link-gioca-con-le-parole.png"></a>
+                    <div id="#HintGiocaconleparole" class="pulsante-mini-audio" ng-click="playAudioHint('#audioHintGiocaconleparole');"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<audio id="audioHintGiocaconlesillabe">
+    <source src="assets/sounds/messaggi/gioca-con-le-sillabe.mp3" type="audio/mpeg" />
+    Your browser does not support this audio format.
+</audio>
+<audio id="audioHintGiocaconleparole">
+    <source src="assets/sounds/messaggi/gioca-con-le-parole.mp3" type="audio/mpeg" />
+    Your browser does not support this audio format.
+</audio>
+
+<audio id="audioGioca">
+    <source src="assets/sounds/messaggi/gioca.mp3" type="audio/mpeg" />
+    Your browser does not support this audio format.
+</audio>

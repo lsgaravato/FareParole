@@ -1,0 +1,45 @@
+﻿<span ng-controller="CostruzioneSillabeController">
+    <div class="wa-header">
+        <div class="bottone-sx"><a href="#/demoSillabe/{{name}}"><img src="assets/images/bottone-sx.png" /></a></div>
+        <div class="casa"><a href="#/"><img src="assets/images/casa.png" /></a></div>
+        <div class="titolo"><img src="assets/images/titolo.png" /></div>
+        <div class="vaiaimparare"><a href="#/impara"><img src="assets/images/vaiaimparare.png" /></a></div>
+        <div class="vaiagiocare"><a href="#/gioca"><img src="assets/images/vaiagiocare.png" /></a></div>
+        <div class="bottone-dx"><a href="#/scritturaSillabe/{{name}}"><img src="assets/images/bottone-dx.png" /></a></div>
+    </div>
+    <div class="wa-main">
+        <div class="wa-main-wrapper">
+            <div class="wa-c3">
+                <div class="box-consonanti" style="position: relative">
+                    <img class="imgToccaCarte" />
+                    <div id="c3-consonante-{{consonanteIniziale.name}}" class="carta piccola ombra premi lettera" ng-click="checkSelection(sillabe[0].group);"><img ng-src="{{consonanteIniziale.imageUrl}}" /></div>
+                    <div id="c3-consonante-{{sillaba.s2}}" class="carta piccola ombra premi" ng-repeat="sillaba in sillabe" ng-click="checkSelection(sillaba.s2);" style="margin-right:20px"><img ng-src="{{sillaba.imageUrl}}" /></div>
+                </div>
+                <div class="box-scrittura">
+                    <div id="s1" class="lettera-1">{{sillaba1Mostrata.toUpperCase()}}</div>
+                    <div id="s2" class="lettera-2">{{sillaba2Mostrata.toUpperCase()}}</div>
+                </div>
+                <div class="box-pulsante">
+                    <div class="pulsante audio" ng-click="playSoundLettura();">
+                        <img class="imgToccaBottone" />
+                    </div>
+                </div>
+
+                <audio id="audio" preload="auto">
+                    <source ng-src="{{currentSillaba.audioSillaba}}" type="audio/mpeg" />
+                    Your browser does not support this audio format.
+                </audio>
+            </div>
+        </div>
+    </div>
+</span>
+
+<audio id="audioToccaLeLettere" preload="auto">
+    <source src="assets/sounds/messaggi/tocca-le-lettere.mp3" type="audio/mpeg" />
+    Your browser does not support this audio format.
+</audio>
+
+<audio id="audioVittoria">
+    <source src="assets/sounds/messaggi/applausi.mp3" type="audio/mpeg" />
+    Your browser does not support this audio format.
+</audio>

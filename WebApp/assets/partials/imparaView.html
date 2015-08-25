@@ -1,0 +1,34 @@
+﻿<div class="wa-header">
+    <!--<div class="bottone-sx"><a href="#/"><img src="assets/images/bottone-sx.png" /></a></div>-->
+    <div class="casa"><a href="#/"><img src="assets/images/casa.png" /></a></div>
+    <div class="titolo"><img src="assets/images/titolo.png" /></div>
+    <div class="vaiaimparare"><a href="#/impara"><img src="assets/images/vaiaimparare.png" /></a></div>
+    <div class="vaiagiocare"><a href="#/gioca"><img src="assets/images/vaiagiocare.png" /></a></div>
+    <!--<div class="bottone-dx"><a href="#/"><img src="assets/images/bottone-dx.png" /></a></div>-->
+</div>
+<div class="wa-main bg-impara">
+    <div class="wa-main-wrapper">
+        <div class="wa-impara" ng-controller="ImparaController">
+            <div class="box-impara" style="position: relative">
+                <img class="imgToccaCarte" />
+                <div class="impara-vocali">
+                    <div ng-click="changeLocation('/demoVocali')">
+                        <div ng-repeat="vocale in vocali" id="impara-{{vocale.name}}" class="carta moltopiccola"><img ng-src="{{vocale.imageUrl}}" /></div>
+                    </div>
+                </div>
+                <div class="impara-box-consonanti">
+                    <div class="impara-consonanti">
+						<div ng-repeat="consonante in consonantiRiga1" id="impara-{{consonante.name}}" class="carta moltopiccola premi"><a href="#/demoConsonante/{{consonante.name}}"><img ng-src="{{consonante.imageUrl}}" /></a></div>
+                    </div>
+                    <div class="impara-consonanti">
+                        <div ng-repeat="consonante in consonantiRiga2" id="impara-{{consonante.name}}" class="carta moltopiccola premi"><a href="#/demoConsonante/{{consonante.name}}"><img ng-src="{{consonante.imageUrl}}" /></a></div>
+                    </div>
+                    <div class="impara-consonanti">
+                        <div ng-repeat="consonante in consonantiRiga3" id="impara-{{consonante.name}}" class="carta moltopiccola premi"><a href="#/demoConsonante/{{consonante.name}}"><img ng-src="{{consonante.imageUrl}}" /></a></div>
+                        <div id="impara-caso" class="carta moltopiccola premi"><a href="#/demoConsonante/{{consonanteRandom.name}}"><img ng-src="{{imgConsonanteCaso}}" /></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
