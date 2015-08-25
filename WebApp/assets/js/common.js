@@ -121,11 +121,11 @@ function playAudio(audioElement) {
 function playAudioPhoneGap(audioElement) {
 
     var url = audioElement.getAttribute('src');
-    var myMedia = new Media(url,
+    var myMedia = new Media('/android_asset/www/' + url,
             // success callback
-             function () { console.log("playAudio():Audio Success"); },
+             function () { /* do nothing */ },
             // error callback
-             function (err) { console.log("playAudio():Audio Error: " + err); }
+             function (err) { /* do nothing */ }
     );
     // Play audio
     myMedia.play();
