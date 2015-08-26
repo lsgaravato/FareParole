@@ -128,7 +128,8 @@ function playAudioPhoneGap(audioElement) {
 }
 
 function playMP3() {
-    var mp3URL = getMediaURL("assets/sounds/messaggi/applausi.mp3");
+    //var mp3URL = getMediaURL("assets/sounds/messaggi/applausi.mp3");
+    var mp3URL = getMediaURL("assets/sounds/messaggi/tocca-il-bottone.mp3");
     var media = new Media(mp3URL, null, mediaError);
     media.play();
 }
