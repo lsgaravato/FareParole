@@ -110,23 +110,19 @@ function playAudio(audioElement) {
     if (audioElement == undefined)
         return;
     
-    if (isWebApp) {
-        audioElement.load();
-        audioElement.play();
-    } else {
+    //if (isWebApp()) {
+    //    audioElement.load();
+    //    audioElement.play();
+    //} else {
         playAudioPhoneGap(audioElement);
-    }
+    //}
 }
 
 function playAudioPhoneGap(audioElement) {
 
-    var url = audioElement.getAttribute('src');
-    var myMedia = new Media('/android_asset/www/' + url,
-            // success callback
-             function () { /* do nothing */ },
-            // error callback
-             function (err) { /* do nothing */ }
-    );
+    var src = audioElement.getAttribute('src');
+    var url = getMediaURL(src);
+    var myMedia = new Media('/android_asset/www/' + url, null, mediaError);
     // Play audio
     myMedia.play();
 }
