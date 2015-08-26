@@ -40,24 +40,7 @@ var app = {
         });*/
 
         // test
-        var myMedia = new Media('/android_asset/www/assets/sounds/messaggi/bene.mp3',
-                // success callback
-                 function () { /* do nothing */ },
-                // error callback
-                 function (err) { console.log('Non ha funzionato mica tanto bene [MP3]'); }
-        );
-        // Play audio
-        myMedia.play();
-
-
-        var myMedia2 = new Media('/android_asset/www/assets/sounds/test.ogg',
-                // success callback
-                 function () { /* do nothing */ },
-                // error callback
-                 function (err) { console.log('Non ha funzionato mica tanto bene [OGG]'); }
-        );
-        // Play audio
-        myMedia2.play();
+        playMP3();
     }
 };
 

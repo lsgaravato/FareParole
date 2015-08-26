@@ -131,6 +131,22 @@ function playAudioPhoneGap(audioElement) {
     myMedia.play();
 }
 
+function playMP3() {
+    var mp3URL = getMediaURL("assets/sounds/messaggi/applausi.mp3");
+    var media = new Media(mp3URL, null, mediaError);
+    media.play();
+}
+
+function getMediaURL(s) {
+    if (device.platform.toLowerCase() === "android") return "/android_asset/www/" + s;
+    return s;
+}
+
+function mediaError(e) {
+    alert('Media Error');
+    alert(JSON.stringify(e));
+}
+
 
 function isWebApp() {
     return document.URL.match(/^(https?|localhost|chrome-extension):/);
