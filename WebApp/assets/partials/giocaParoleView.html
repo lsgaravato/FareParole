@@ -30,8 +30,7 @@
                         <img class="imgToccaBottone" />
                     </div>
                 </div>
-                <audio id="audio" preload="auto">
-                    <source ng-src="{{currentParola.audioParola}}" type="audio/mpeg" />
+                <audio id="audio" ng-src="{{currentParola.audioParola}}" type="audio/mpeg" preload="auto">
                     Your browser does not support this audio format.
                 </audio>
             </div>
@@ -56,7 +55,6 @@
 
 </div>
 
-<audio id="audioVittoria">
-    <source src="assets/sounds/messaggi/applausi.mp3" type="audio/mpeg" />
+<audio id="audioVittoria" src="assets/sounds/messaggi/applausi.mp3" type="audio/mpeg">
     Your browser does not support this audio format.
 </audio>

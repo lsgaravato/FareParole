@@ -16,8 +16,7 @@
                         <div class="pulsante-mini-audio" ng-click="playSillaba(sillaba);">
                             <img class="imgToccaBottone" />
                         </div>
-                        <audio id="audio-{{sillaba.name}}">
-                            <source ng-src="{{sillaba.audioScandito}}" type="audio/mpeg" />
+                        <audio id="audio-{{sillaba.name}}" ng-src="{{sillaba.audioScandito}}" type="audio/mpeg">
                             Your browser does not support this audio format.
                         </audio>
                         <div id="lettera-{{sillaba.s1}}" class="lettera-1">{{sillaba.s1.toUpperCase()}}</div>
