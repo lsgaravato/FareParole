@@ -21,8 +21,12 @@
   <feature name="Media">
     <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
   </feature>
+  <feature name="Device">
+    <param name="android-package" value="org.apache.cordova.device.Device" />
+  </feature>
 
   <!-- Core plugins -->
+  <gap:plugin name="org.apache.cordova.device" />
   <gap:plugin name="org.apache.cordova.media" />
 
 </widget>
