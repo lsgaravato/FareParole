@@ -134,7 +134,7 @@ function playMP3() {
 }
 
 function getMediaURL(s) {
-    if (device.platform.toLowerCase() === "android") return "/android_asset/www/" + s;
+    if (device.platform.toLowerCase() === "android") s = "/android_asset/www/" + s;
     alert('Trying to play: ' + s);
     return s;
 }
