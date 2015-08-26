@@ -122,7 +122,7 @@ function playAudioPhoneGap(audioElement) {
 
     var src = audioElement.getAttribute('src');
     var url = getMediaURL(src);
-    var myMedia = new Media('/android_asset/www/' + url, null, mediaError);
+    var myMedia = new Media(url, null, mediaError);
     // Play audio
     myMedia.play();
 }
