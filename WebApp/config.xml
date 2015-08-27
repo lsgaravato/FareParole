@@ -3,7 +3,7 @@
     xmlns:gap   = "http://phonegap.com/ns/1.0"
     xmlns:android   = "http://schemas.android.com/apk/res/android"
     id          = "com.riccardocavalieri.fareparole"
-    version     = "0.2.6" >
+    version     = "0.2.8" >
 
   <!-- versionCode is optional and Android only -->
 
@@ -12,6 +12,8 @@
   <description>
     A breve una descrizione dell'app.
   </description>
+
+  <icon src="icon.png" />
 
   <author href="www.riccardocavalieri.com" email="riccardocavalieri@gmail.com">
     Riccardo Cavalieri
