@@ -110,12 +110,12 @@ function playAudio(audioElement) {
     if (audioElement == undefined)
         return;
     
-    //if (isWebApp()) {
-    //    audioElement.load();
-    //    audioElement.play();
-    //} else {
+    if (isWebApp()) {
+        audioElement.load();
+        audioElement.play();
+    } else {
         playAudioPhoneGap(audioElement);
-    //}
+    }
 }
 
 function playAudioPhoneGap(audioElement) {
@@ -127,12 +127,12 @@ function playAudioPhoneGap(audioElement) {
     myMedia.play();
 }
 
-function playMP3() {
-    //var mp3URL = getMediaURL("assets/sounds/messaggi/applausi.mp3");
-    var mp3URL = getMediaURL("assets/sounds/messaggi/tocca-il-bottone.mp3");
-    var media = new Media(mp3URL, null, mediaError);
-    media.play();
-}
+//function playMP3() {
+//    //var mp3URL = getMediaURL("assets/sounds/messaggi/applausi.mp3");
+//    var mp3URL = getMediaURL("assets/sounds/messaggi/tocca-il-bottone.mp3");
+//    var media = new Media(mp3URL, null, mediaError);
+//    media.play();
+//}
 
 function getMediaURL(s) {
     if (device.platform.toLowerCase() === "android") s = "/android_asset/www/" + s;

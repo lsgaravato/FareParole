@@ -38,9 +38,6 @@ var app = {
         /*angular.element(document).ready(function() {
             angular.bootstrap(document);
         });*/
-
-        // test
-        playMP3();
     }
 };
 
