@@ -127,7 +127,7 @@ function playAudioPhoneGap(audioElement) {
     
     // Play audio
     if (myMedia) {
-        myMedia.stop();
+        //myMedia.stop();
         myMedia.release();
     }
     myMedia = new Media(url, null, mediaError);
@@ -143,13 +143,20 @@ function playAudioPhoneGap(audioElement) {
 
 function getMediaURL(s) {
     if (device.platform.toLowerCase() === "android") s = "/android_asset/www/" + s;
-    alert('Trying to play: ' + s);
+    //alert('Trying to play: ' + s);
     return s;
 }
 
+function mediaSuccess() {
+    if (myMedia) {
+        myMedia.release();
+    }
+}
+
+
 function mediaError(e) {
     if (myMedia) {
-        myMedia.stop();
+        //myMedia.stop();
         myMedia.release();
     }
     alert('Media Error (' + JSON.stringify(e) + ')');
