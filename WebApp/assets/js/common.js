@@ -118,12 +118,19 @@ function playAudio(audioElement) {
     }
 }
 
+var myMedia;
+
 function playAudioPhoneGap(audioElement) {
 
     var src = audioElement.getAttribute('src');
     var url = getMediaURL(src);
-    var myMedia = new Media(url, null, mediaError);
+    
     // Play audio
+    if (myMedia) {
+        myMedia.stop();
+        myMedia.release();
+    }
+    myMedia = new Media(url, null, mediaError);
     myMedia.play();
 }
 
@@ -141,6 +148,10 @@ function getMediaURL(s) {
 }
 
 function mediaError(e) {
+    if (myMedia) {
+        myMedia.stop();
+        myMedia.release();
+    }
     alert('Media Error (' + JSON.stringify(e) + ')');
 }
 
