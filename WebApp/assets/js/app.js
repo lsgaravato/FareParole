@@ -39,6 +39,7 @@ var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ngTouch', 'myAppCo
             $routeProvider.when('/gioca/parole', { templateUrl: 'assets/partials/giocaParoleView.html' });
             $routeProvider.when('/leggi', { templateUrl: 'assets/partials/leggiView.html' });
             $routeProvider.when('/crediti', { templateUrl: 'assets/partials/creditiView.html' });
+            $routeProvider.when('/versioni', { templateUrl: 'assets/partials/versioniView.html' });
             $routeProvider.otherwise({ redirectTo: '/' });
         }
     ])
