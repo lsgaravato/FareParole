@@ -3,14 +3,14 @@
     xmlns:gap   = "http://phonegap.com/ns/1.0"
     xmlns:android   = "http://schemas.android.com/apk/res/android"
     id          = "com.riccardocavalieri.fareparole"
-    version     = "0.2.9" >
+    version     = "0.2.10" >
 
   <!-- versionCode is optional and Android only -->
 
   <name>Fare Parole</name>
 
   <description>
-    A breve una descrizione dell'app.
+    Obiettivo della App “Fare parole” è accompagnare, sostenere e facilitare il percorso di apprendimento della letto-scrittura dell’italiano per adulti stranieri a nulla o debole scolarità nel paese di origine, analfabeti o semianalfabeti anche in lingua madre.
   </description>
 
   <icon src="icon.png" />
