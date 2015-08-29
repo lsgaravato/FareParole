@@ -136,13 +136,12 @@ function playAudioPhoneGap(audioElement) {
 
 function getMediaURL(s) {
     if (device.platform.toLowerCase() === "android") s = "/android_asset/www/" + s;
-    console.log('Trying to play: ' + s);
+    alert('Trying to play: ' + s);
     return s;
 }
 
 function mediaError(e) {
-    alert('Media Error');
-    alert(JSON.stringify(e));
+    alert('Media Error (' + JSON.stringify(e) + ')');
 }
 
 
