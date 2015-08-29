@@ -111,7 +111,17 @@ function playAudio(audioElement) {
         return;
     
     if (isWebApp()) {
-        audioElement.load();
+
+        // stoppa tutti gli audio che stanno suonando
+        //$('audio').each(function(index) { if (!this.paused) this.pause(); });
+        //audioElement.load();
+
+        if (playingAudioTag && !playingAudioTag.paused) {
+            playingAudioTag.pause();
+            playingAudioTag.currentTime = 0.0;
+            //while(!playingAudioTag.paused) {} // wait
+        }
+        playingAudioTag = audioElement;
         audioElement.play();
     } else {
         playAudioPhoneGap(audioElement);
@@ -119,6 +129,7 @@ function playAudio(audioElement) {
 }
 
 var myMedia;
+var playingAudioTag;
 
 function playAudioPhoneGap(audioElement) {
 
