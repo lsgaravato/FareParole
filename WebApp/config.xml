@@ -32,4 +32,13 @@
   <gap:plugin name="org.apache.cordova.device" />
   <gap:plugin name="org.apache.cordova.media" />
 
+  <content src="index.html" />
+
+  <plugins>
+    <plugin name="Device" value="CDVDevice" />
+    <plugin name="Media" value="CDVSound" />
+  </plugins>
+
+  <access origin="*" />
+
 </widget>
