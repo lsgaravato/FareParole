@@ -600,8 +600,11 @@ myAppControllers.controller('GiocaSillabeController', [
 
         $scope.play = function () {
 
-            if (suonoAscoltato && !sillabaIndovinata)
+            if (suonoAscoltato && !sillabaIndovinata) {
+                playAudio(audioPlayer); // riascolta suono
                 return;
+            }
+                
 
             clearSelection();
             setCurrentSillaba();
