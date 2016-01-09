@@ -37,11 +37,11 @@
     Riccardo Cavalieri
   </author>
 
-  <feature name="Media">
+  <feature name="media">
     <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
     <param name="ios-package" value="CDVSound" />
   </feature>
-  <feature name="Device">
+  <feature name="device">
     <param name="android-package" value="org.apache.cordova.device.Device" />
     <param name="ios-package" value="CDVDevice" />
   </feature>
@@ -53,8 +53,8 @@
   <content src="index.html" />
 
   <plugins>
-    <plugin name="Device" value="CDVDevice" />
-    <plugin name="Media" value="CDVSound" />
+    <plugin name="device" value="CDVDevice" />
+    <plugin name="media" value="CDVSound" />
   </plugins>
 
   <access origin="*" />
