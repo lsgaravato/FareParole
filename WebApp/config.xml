@@ -14,6 +14,7 @@
   </description>
 
   <preference name="orientation" value="landscape" />
+  <preference name="phonegap-version" value="cli-5.2.0" />
   
   <icon src="icon.png" />
   
@@ -46,8 +47,8 @@
   </feature>
 
   <!-- Core plugins -->
-  <gap:plugin name="org.apache.cordova.device" />
-  <gap:plugin name="org.apache.cordova.media" />
+  <gap:plugin name="org.apache.cordova.device" source="npm" />
+  <gap:plugin name="org.apache.cordova.media" source="npm" />
 
   <content src="index.html" />
 
