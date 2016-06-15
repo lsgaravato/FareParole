@@ -11,7 +11,8 @@ var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ngTouch', 'myAppCo
         // Prevent Angular from sniffing for the history API since it's not supported in packaged apps.
 		// this prevents error "history.pushState is not available in packaged apps."
         $provide.decorator('$window', function($delegate) {
-            $delegate.history = null;
+            //$delegate.history = null;
+            Object.defineProperty($delegate, 'history', {get: () => null});
             return $delegate;
         });
     })
