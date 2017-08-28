@@ -509,6 +509,10 @@ myAppControllers.controller('CostruzioneSillabeController', [
             var letteraDaControllare = ($scope.sillaba1Indovinata) ? $scope.currentSillaba.s2 : $scope.currentSillaba.s1;
             var element = angular.element('#c3-consonante-' + letterName + ' > img');
 
+            // FIXME: Cablatura per il caso particolare della Q, fare un fix generico
+            if (letterName == "Q")
+                letterName = "QU";
+
             if (letteraDaControllare == letterName) {
                 rightAnswer(element);
             } else {
