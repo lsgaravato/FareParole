@@ -512,6 +512,8 @@ myAppControllers.controller('CostruzioneSillabeController', [
             // FIXME: Cablatura per il caso particolare della Q, fare un fix generico
             if (letterName == "Q")
                 letterName = "QU";
+            else if (letterName == "CDOLCE")
+                letterName = "C";
 
             if (letteraDaControllare == letterName) {
                 rightAnswer(element);
