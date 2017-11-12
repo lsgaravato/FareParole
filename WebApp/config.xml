@@ -47,14 +47,14 @@
   </feature>
 
   <!-- Core plugins -->
-  <gap:plugin name="org.apache.cordova.device" source="npm" />
-  <gap:plugin name="org.apache.cordova.media" source="npm" />
+  <gap:plugin name="cordova-plugin-device" source="npm" />
+  <gap:plugin name="cordova-plugin-media" source="npm" />
 
   <content src="index.html" />
 
   <plugins>
-    <plugin name="device" value="CDVDevice" />
-    <plugin name="media" value="CDVSound" />
+    <plugin name="cordova-plugin-device" value="org.apache.cordova.Device" />
+    <plugin name="cordova-plugin-media" value="org.apache.cordova.media" />
   </plugins>
 
   <access origin="*" />
