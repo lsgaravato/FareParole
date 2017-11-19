@@ -1,10 +1,6 @@
-﻿@charset "utf-8";
-/* CSS Document */
-
-html {
-    overflow-y: visible; /* serve per abilitare lo scrolling su Google Chrome Packaged Apps */
+﻿html {
+	overflow-y: visible; /* serve per abilitare lo scrolling su Google Chrome Packaged Apps */
 }
-
 body {
 	font-family: Arial, serif;
 	font-size: 16px;
@@ -39,7 +35,7 @@ body {
 }
 .bottone-sx:hover {
 	opacity: 0.5;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha"(Opacity=50);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 }
 .bottone-dx {
 	float: right;
@@ -471,7 +467,7 @@ body {
 	-webkit-border-radius: 10px;
 	border: 4px solid #c3b3b3;
 	border: 4px solid #fff;
-    cursor: pointer;
+	cursor: pointer;
 	/*background-color: #fff*/;
 }
 .carta .testo {
@@ -544,11 +540,11 @@ body {
 /* GENERALI */
 .opacity-100 {
 	opacity: 1;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha"(Opacity=100);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 .opacity-80 {
 	opacity: 1;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha"(Opacity=80);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
 }
 .cursor-hand {
 	cursor: pointer;
@@ -718,64 +714,321 @@ body {
 .bg-crediti {
 	background-color: rgba(255,255,255,1.00)
 }
-
-
-
-
 .pulsante {
-    position: relative;
+	position: relative;
 }
-
 .pulsante-mini-audio {
-    position: relative;
+	position: relative;
 }
-
 .imgToccaBottone {
-    position:absolute;
-    content: url("../images/finger.png");
-    display: none;
+	position: absolute;
+	content: url("../images/finger.png");
+	display: none;
 }
-
 .imgToccaCarte {
-    position:absolute;
-    content: url("../images/finger.png");
-    display: none;
-    width: 120px;
-    height: 120px;
-    left: -100px;
+	position: absolute;
+	content: url("../images/finger.png");
+	display: none;
+	width: 120px;
+	height: 120px;
+	left: -100px;
 }
-
 .pulsante .imgToccaBottone {
-    left: -150px;
-    width: 120px;
-    height: 120px;
+	left: -150px;
+	width: 120px;
+	height: 120px;
 }
-
 .pulsante-mini-audio .imgToccaBottone {
-    left: -100px;
-    width: 62px;
-    height: 62px;
+	left: -100px;
+	width: 62px;
+	height: 62px;
 }
-
 .box-impara .imgToccaCarte {
-    top: 40%;
+	top: 40%;
 }
-
 .box-sillabario .imgToccaCarte {
-    top: 70%;
-    left: -150px;
+	top: 70%;
+	left: -150px;
 }
-
-
 #imgSpeaker {
-    content: url("../images/ico-speaker-loud.png");
-    position: fixed; 
-    bottom: 10px; 
-    right: 10px; 
-    width: 48px;
-    cursor: pointer;
+	content: url("../images/ico-speaker-loud.png");
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	width: 48px;
+	cursor: pointer;
+}
+#imgSpeaker.audioMuted {
+	content: url("../images/ico-speaker-mute.png");
 }
 
-#imgSpeaker.audioMuted {
-    content: url("../images/ico-speaker-mute.png");
+@media (max-width: 800px) {
+img.imgToccaBottone, img.imgToccaCarte {
+	display: none !important;
+	width: 0px;
+}
+.wa-main-wrapper {
+	width: 100%;
+	min-height: 680px;
+	min-height: 535px;
+	height: 100%;
+	margin: 0 auto;
+	padding: 30px 0 0 0;/* background-color: #a3d8e5; */
+}
+.titolo img {
+	width: 50%;
+}
+img.logofooter {
+	width: 100%;
+}
+.wa-leggi {
+	padding: 0 20px;
+}
+.carta.media {
+	width: 100px;
+	height: auto;
+	font-size: 20px;
+	text-align: center;
+	padding: 0 0 0 0;
+	margin: 0;
+	vertical-align: top;
+}
+.carta.moltopiccola {
+	width: auto;
+	height: auto;
+}
+.notapiepagina {
+	font-size: 12px;
+	padding-top: 10px;
+}
+.wa-v1 .box-vocali .carta {
+	margin: 0 10px;
+}
+.wa-v2 .box-vocali .carta {
+	margin: 0 10px;
+}
+.wa-v3 .box-vocali .carta {
+	margin: 0 10px;
+}
+.wa-v4 .box-vocali .carta {
+	margin: 0 10px;
+}
+.wa-v5 .box-vocali .carta {
+	margin: 0 10px;
+}
+.wa-v6 .box-vocali .carta {
+	margin: 0 10px;
+}
+.box-vocali .carta.media {
+	width: 80px;
+	height: auto;
+}
+.wa-c2 .box-sillabazione {
+	font-size: 30px;
+	line-height: 30px;
+}
+.wa-c2 .sillaba {
+	text-align: left;
+	float: left;
+	width: 60px;
+	margin-left: 40px;
+}
+.wa-c2 .lettera-1 {
+	text-align: left;
+	float: left;
+	width: 60px;
+	margin-left: 40px;
+}
+.wa-c2 .lettera-2 {
+	text-align: left;
+	float: left;
+	width: 60px;
+	margin-left: 40px;
+}
+.wa-c2 .lettera-3 {
+	text-align: left;
+	float: left;
+	width: 60px;
+	margin-left: 40px;
+}
+.carta.piccola {
+	width: 50px !important;
+	height: auto !important;
+}
+.wa-c4 .box-consonanti .carta {
+	margin: 0 5px;
+}
+.wa-giocosillabe .box-controllidigioco {
+	margin: 0 20px 30px 10px;
+	float: none;
+}
+.wa-giocosillabe .box-sillabario {
+	float: right;
+	float: none;
+	margin-bottom: 40px;
+}
+.wa-giocoparole .box-disegno {
+	text-align: center;
+	width: auto;
+}
+.wa-giocoparole .box-controllidigioco {
+	margin: 0 auto;
+	float: none;
+}
+.wa-giocoparole .box-sillabario {
+	float: none;
+	margin: 30px 0;
+}
+.wa-ascolta .box-sillabazione {
+	font-size: 15px;
+	line-height: 68px;
+	margin: 0;
+	padding: 10px 0 10px 20px;
+	border-bottom: 2px #fff solid;
+}
+.wa-ascolta .sillaba {
+	text-align: left;
+	float: left;
+	width: 40px;
+	margin-left: 30px;
+}
+.sillaba-a {
+	min-width: 60px;
+}
+.wa-impara .carta img {
+	width: 50px;
+}
+.wa-scrittura .box-board .carta.tastiera img, .wa-minuscoloscrittura .box-board #keyboard img {
+	width: 50px;
+}
+.wa-minuscoloscrittura.wa-tastieracomputer .box-board #keyboard img, .wa-giocaparole .carta img {
+	width: 35px !important;
+}
+.sillaba-a {
+	margin-left: 20px;
+	margin-right: 20px;
+	width: auto;
+	min-width: 60px;
+}
+.wa-ascolta .sillaba {
+	margin-left: 20px;
+}
+.wa-ascolta .parte-0 {
+	text-align: left;
+	float: left;
+	width: 60px;
+	margin-left: 20px;
+}
+.wa-ascolta .parte-1 {
+	text-align: left;
+	float: left;
+	width: 60px;
+	margin-left: 20px;
+}
+.wa-ascolta .parte-2 {
+	text-align: left;
+	float: left;
+	width: 60px;
+	margin-left: 20px;
+}
+.wa-ascolta .parte-3 {
+	text-align: left;
+	float: left;
+	width: 60px;
+	margin-left: 20px;
+}
+.wa-ascolta .parte-4 {
+	text-align: left;
+	float: left;
+	width: 60px;
+	margin-left: 20px;
+}
+.wa-ascolta .sillaba {
+	text-align: left;
+	float: left;
+	width: 80px;
+	margin-left: 20px;
+}
+.pulsante {
+	cursor: pointer;
+	width: 60px;
+	height: 60px;
+}
+.pulsante.audio {
+	background-size: 70%;
+}
+.pulsante.leggi {
+	background-size: 70%;
+}
+.wa-scrittura .box-board .box-scrittura {
+	font-size: 25px;
+	line-height: 70px;
+	text-align: center;
+	margin: 0 auto 20px auto;
+	width: 250px;
+	background-color: #fff;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	display: inline;
+	padding-bottom: 20px;
+	padding-right: 20px;
+	display: inline;
+	padding: 20px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.wa-preLettura .box-board .box-monitor .box-scrittura {
+	font-size: 30px;
+}
+.wa-minuscoloscrittura .box-board .box-scrittura {
+	font-size: 35px;
+	line-height: 35px;
+}
+.wa-minuscoloPreScrittura .box-board .box-monitor .box-scrittura {
+	font-size: 30px;
+	line-height: 60px;
+}
+.box-scrittura-global {
+	display: inline-block;
+	min-width: 300px;
+	margin-right: 160px;
+}
+.wa-lettura .box-board .box-monitor .box-scrittura {
+	font-size: 30px;
+	line-height: 60px;
+	text-align: center;
+}
+.wa-verifica .box-consonanti .carta {
+	margin: 0 15px;
+}
+.wa-lettura .box-board .box-monitor .box-scrittura .parte {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.wa-minuscoloscrittura .box-board .box-monitor {
+	margin: 30px auto 30px;
+}
+.wa-minuscoloPreScrittura .box-board .box-monitor {
+	margin: 30px 50px;
+}
+.wa-minuscoloPreScrittura .box-board .box-monitor .box-scrittura {
+	font-size: 20px;
+	line-height: 50px;
+}
+.wa-giocasillabe .box-board .box-monitor {
+	margin: 30px 10px;
+}
+.wa-giocasillabe .box-board .box-scrittura {
+	font-size: 30px;
+	line-height: 60px;
+	text-align: center;
+	margin: 0 auto 50px auto;
+	width: 150px;
+}
+.wa-giocaparole .box-board .box-scrittura {
+	font-size: 30px;
+	line-height: 60px;
+	text-align: center;
+}
 }
